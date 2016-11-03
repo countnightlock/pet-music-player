@@ -1,0 +1,594 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>963</width>
+    <height>469</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>963</width>
+    <height>469</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Player</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="tabPosition">
+       <enum>QTabWidget::North</enum>
+      </property>
+      <property name="tabShape">
+       <enum>QTabWidget::Rounded</enum>
+      </property>
+      <property name="currentIndex">
+       <number>5</number>
+      </property>
+      <property name="elideMode">
+       <enum>Qt::ElideNone</enum>
+      </property>
+      <property name="tabsClosable">
+       <bool>false</bool>
+      </property>
+      <property name="movable">
+       <bool>true</bool>
+      </property>
+      <property name="tabBarAutoHide">
+       <bool>false</bool>
+      </property>
+      <widget class="QWidget" name="player_tab">
+       <attribute name="title">
+        <string>Player</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_2">
+        <item row="0" column="0">
+         <widget class="QLabel" name="progressDone">
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QSlider" name="sliderProgress">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="2">
+         <widget class="QLabel" name="progressTotal">
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="3">
+         <widget class="QDial" name="dialVolume">
+          <property name="value">
+           <number>50</number>
+          </property>
+          <property name="invertedAppearance">
+           <bool>false</bool>
+          </property>
+          <property name="invertedControls">
+           <bool>false</bool>
+          </property>
+          <property name="wrapping">
+           <bool>false</bool>
+          </property>
+          <property name="notchesVisible">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1" colspan="2">
+         <layout class="QVBoxLayout" name="verticalLayout">
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout">
+            <item>
+             <widget class="QLabel" name="titleLabel">
+              <property name="frameShape">
+               <enum>QFrame::NoFrame</enum>
+              </property>
+              <property name="text">
+               <string>Title</string>
+              </property>
+              <property name="wordWrap">
+               <bool>true</bool>
+              </property>
+              <property name="margin">
+               <number>0</number>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="artistLabel">
+              <property name="text">
+               <string>Artist</string>
+              </property>
+              <property name="wordWrap">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="albumLabel">
+              <property name="text">
+               <string>Album</string>
+              </property>
+              <property name="wordWrap">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_3">
+            <item>
+             <widget class="QLabel" name="genreLabel">
+              <property name="text">
+               <string>Genre</string>
+              </property>
+              <property name="wordWrap">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="ratingLabel">
+              <property name="text">
+               <string>Rating</string>
+              </property>
+              <property name="wordWrap">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="bitrateLabel">
+              <property name="text">
+               <string>BitRate</string>
+              </property>
+              <property name="wordWrap">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="playlist_tab">
+       <attribute name="title">
+        <string>Playlist</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_6">
+        <item row="0" column="0">
+         <widget class="QListView" name="playlistListView">
+          <property name="editTriggers">
+           <set>QAbstractItemView::NoEditTriggers</set>
+          </property>
+          <property name="dragEnabled">
+           <bool>true</bool>
+          </property>
+          <property name="dragDropOverwriteMode">
+           <bool>true</bool>
+          </property>
+          <property name="dragDropMode">
+           <enum>QAbstractItemView::InternalMove</enum>
+          </property>
+          <property name="defaultDropAction">
+           <enum>Qt::MoveAction</enum>
+          </property>
+          <property name="alternatingRowColors">
+           <bool>true</bool>
+          </property>
+          <property name="selectionMode">
+           <enum>QAbstractItemView::SingleSelection</enum>
+          </property>
+          <property name="selectionBehavior">
+           <enum>QAbstractItemView::SelectRows</enum>
+          </property>
+          <property name="movement">
+           <enum>QListView::Free</enum>
+          </property>
+          <property name="selectionRectVisible">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <layout class="QVBoxLayout" name="verticalLayout_5">
+          <item>
+           <widget class="QPushButton" name="savePlaylistButton">
+            <property name="text">
+             <string>Save This Playlist</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="loadPlaylistButton">
+            <property name="text">
+             <string>Load Playlist</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="library_tab">
+       <attribute name="title">
+        <string>Library</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_7">
+        <item row="0" column="0">
+         <layout class="QVBoxLayout" name="verticalLayout_2">
+          <item>
+           <widget class="QLabel" name="label">
+            <property name="text">
+             <string>Artists</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QListWidget" name="artistList"/>
+          </item>
+         </layout>
+        </item>
+        <item row="0" column="1">
+         <layout class="QVBoxLayout" name="verticalLayout_3">
+          <item>
+           <widget class="QLabel" name="label_2">
+            <property name="text">
+             <string>Albums</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QListWidget" name="albumList"/>
+          </item>
+         </layout>
+        </item>
+        <item row="0" column="2">
+         <layout class="QVBoxLayout" name="verticalLayout_4">
+          <item>
+           <widget class="QLabel" name="label_3">
+            <property name="text">
+             <string>Tracks</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QListWidget" name="trackList"/>
+          </item>
+         </layout>
+        </item>
+        <item row="1" column="0" colspan="3">
+         <layout class="QHBoxLayout" name="horizontalLayout_2">
+          <item>
+           <widget class="QPushButton" name="populateButton">
+            <property name="text">
+             <string>Populate</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>448</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="lyrics_tab">
+       <attribute name="title">
+        <string>Lyrics</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_3">
+        <item row="0" column="0">
+         <widget class="QTextBrowser" name="lyricsPane">
+          <property name="placeholderText">
+           <string>Click the &quot;Download Lyrics&quot; button to Search for Lyrics on www.azlyrics.com</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="visualiser_tab">
+       <attribute name="title">
+        <string>Visualiser</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_4">
+        <item row="0" column="0">
+         <layout class="QGridLayout" name="gridLayout_5"/>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="themes_tab">
+       <attribute name="title">
+        <string>Themes</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_8">
+        <item row="0" column="0">
+         <widget class="QListWidget" name="colorListWidget">
+          <item>
+           <property name="text">
+            <string>Bulbasaur</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Charmander</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Squirtle</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Gyarados</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Pikachu</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Chansey</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Growlithe</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionOpen"/>
+   <addaction name="separator"/>
+   <addaction name="actionPrevious"/>
+   <addaction name="actionPlayback"/>
+   <addaction name="actionNext"/>
+   <addaction name="actionStop"/>
+   <addaction name="separator"/>
+   <addaction name="actionShuffle"/>
+   <addaction name="separator"/>
+   <addaction name="actionMute"/>
+   <addaction name="separator"/>
+   <addaction name="actionDownloadLyrics"/>
+   <addaction name="separator"/>
+   <addaction name="actionStar1"/>
+   <addaction name="actionStar2"/>
+   <addaction name="actionStar3"/>
+   <addaction name="actionStar4"/>
+   <addaction name="actionStar5"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionOpen">
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/icons/icons/ic_queue_black_48dp_2x.png</normaloff>:/icons/icons/ic_queue_black_48dp_2x.png</iconset>
+   </property>
+   <property name="text">
+    <string>Open</string>
+   </property>
+   <property name="toolTip">
+    <string>Open a Track</string>
+   </property>
+   <property name="shortcut">
+    <string>O</string>
+   </property>
+  </action>
+  <action name="actionPlayback">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/icons/icons/ic_pause_black_48dp_2x.png</normaloff>:/icons/icons/ic_pause_black_48dp_2x.png</iconset>
+   </property>
+   <property name="text">
+    <string>Playback</string>
+   </property>
+   <property name="toolTip">
+    <string>Toggle Pause and Resume</string>
+   </property>
+   <property name="shortcut">
+    <string>P</string>
+   </property>
+  </action>
+  <action name="actionStop">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/icons/icons/ic_stop_black_48dp_2x.png</normaloff>:/icons/icons/ic_stop_black_48dp_2x.png</iconset>
+   </property>
+   <property name="text">
+    <string>Stop</string>
+   </property>
+   <property name="toolTip">
+    <string>Stop Playback</string>
+   </property>
+   <property name="shortcut">
+    <string>S</string>
+   </property>
+  </action>
+  <action name="actionMute">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/icons/icons/ic_volume_up_black_48dp_2x.png</normaloff>:/icons/icons/ic_volume_up_black_48dp_2x.png</iconset>
+   </property>
+   <property name="text">
+    <string>Mute</string>
+   </property>
+   <property name="toolTip">
+    <string>Toggle Mute</string>
+   </property>
+   <property name="shortcut">
+    <string>M</string>
+   </property>
+  </action>
+  <action name="actionDownloadLyrics">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/icons/icons/ic_subtitles_black_48dp_2x.png</normaloff>:/icons/icons/ic_subtitles_black_48dp_2x.png</iconset>
+   </property>
+   <property name="text">
+    <string>DownloadLyrics</string>
+   </property>
+   <property name="toolTip">
+    <string>Download Lyrics</string>
+   </property>
+   <property name="shortcut">
+    <string>L</string>
+   </property>
+  </action>
+  <action name="actionPrevious">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/icons/icons/ic_skip_previous_black_48dp_2x.png</normaloff>:/icons/icons/ic_skip_previous_black_48dp_2x.png</iconset>
+   </property>
+   <property name="text">
+    <string>previous</string>
+   </property>
+   <property name="toolTip">
+    <string>Previous Track</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+&lt;</string>
+   </property>
+  </action>
+  <action name="actionNext">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/icons/icons/ic_skip_next_black_48dp_2x.png</normaloff>:/icons/icons/ic_skip_next_black_48dp_2x.png</iconset>
+   </property>
+   <property name="text">
+    <string>next</string>
+   </property>
+   <property name="toolTip">
+    <string>Next Track</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+&gt;</string>
+   </property>
+  </action>
+  <action name="actionShuffle">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/icons/icons/ic_shuffle_black_48dp_2x.png</normaloff>:/icons/icons/ic_shuffle_black_48dp_2x.png</iconset>
+   </property>
+   <property name="text">
+    <string>shuffle</string>
+   </property>
+   <property name="toolTip">
+    <string>Shuffle Playlist</string>
+   </property>
+   <property name="shortcut">
+    <string>Z</string>
+   </property>
+  </action>
+  <action name="actionStar1">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/icons/icons/ic_star_border_black_48dp_2x.png</normaloff>:/icons/icons/ic_star_border_black_48dp_2x.png</iconset>
+   </property>
+   <property name="text">
+    <string>star1</string>
+   </property>
+   <property name="toolTip">
+    <string>1 Star</string>
+   </property>
+  </action>
+  <action name="actionStar2">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/icons/icons/ic_star_border_black_48dp_2x.png</normaloff>:/icons/icons/ic_star_border_black_48dp_2x.png</iconset>
+   </property>
+   <property name="text">
+    <string>star2</string>
+   </property>
+   <property name="toolTip">
+    <string>2 Stars</string>
+   </property>
+  </action>
+  <action name="actionStar3">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/icons/icons/ic_star_border_black_48dp_2x.png</normaloff>:/icons/icons/ic_star_border_black_48dp_2x.png</iconset>
+   </property>
+   <property name="text">
+    <string>star3</string>
+   </property>
+   <property name="toolTip">
+    <string>3 Stars</string>
+   </property>
+  </action>
+  <action name="actionStar4">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/icons/icons/ic_star_border_black_48dp_2x.png</normaloff>:/icons/icons/ic_star_border_black_48dp_2x.png</iconset>
+   </property>
+   <property name="text">
+    <string>star4</string>
+   </property>
+   <property name="toolTip">
+    <string>4 Stars</string>
+   </property>
+  </action>
+  <action name="actionStar5">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/icons/icons/ic_star_border_black_48dp_2x.png</normaloff>:/icons/icons/ic_star_border_black_48dp_2x.png</iconset>
+   </property>
+   <property name="text">
+    <string>star5</string>
+   </property>
+   <property name="toolTip">
+    <string>5 Stars</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="resources.qrc"/>
+ </resources>
+ <connections/>
+</ui>

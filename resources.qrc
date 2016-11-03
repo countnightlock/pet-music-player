@@ -1,0 +1,19 @@
+<RCC>
+    <qresource prefix="/icons">
+        <file>icons/ic_folder_open_black_48dp_2x.png</file>
+        <file>icons/ic_pause_black_48dp_2x.png</file>
+        <file>icons/ic_play_arrow_black_48dp_2x.png</file>
+        <file>icons/ic_queue_black_48dp_2x.png</file>
+        <file>icons/ic_shuffle_black_48dp_2x.png</file>
+        <file>icons/ic_skip_next_black_48dp_2x.png</file>
+        <file>icons/ic_skip_previous_black_48dp_2x.png</file>
+        <file>icons/ic_star_black_48dp_2x.png</file>
+        <file>icons/ic_star_border_black_48dp_2x.png</file>
+        <file>icons/ic_stop_black_48dp_2x.png</file>
+        <file>icons/ic_subtitles_black_48dp_2x.png</file>
+        <file>icons/ic_volume_down_black_48dp_2x.png</file>
+        <file>icons/ic_volume_mute_black_48dp_2x.png</file>
+        <file>icons/ic_volume_off_black_48dp_2x.png</file>
+        <file>icons/ic_volume_up_black_48dp_2x.png</file>
+    </qresource>
+</RCC>
